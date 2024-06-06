@@ -1,0 +1,138 @@
+/* General Styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  height: 100%; /* Allow the body to take full height */
+  overflow-y: auto; /* Allow vertical scrolling if content overflows */
+}
+
+#myVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#contentBox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 600px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  overflow-y: scroll;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Firefox */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  padding: 10px 2px;
+}
+
+#contentBox::-webkit-scrollbar {
+  width: 10px;
+}
+
+#contentBox::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#contentBox::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+}
+
+.item {
+  display: block;
+  margin: 20px;
+  padding: 10px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  text-decoration: none; /* Ensure link styling is removed */
+  color: white; /* Ensure text color is white */
+}
+
+.item:hover {
+  transform: scale(1.05);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.item h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.item img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.item p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* PC-Specific Styling */
+@media (min-width: 768px) {
+  #contentBox {
+    width: 400px;
+    height: 700px;
+  }
+
+  .item h2 {
+    font-size: 1.5em;
+  }
+
+  .item img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .item p {
+    font-size: 16px;
+  }
+}
+
+/* Mobile-Specific Styling */
+@media (max-width: 767px) {
+  body {
+    overflow-y: auto; /* Ensure body is scrollable on mobile */
+  }
+
+  #contentBox {
+    width: 90%;
+    height: auto; /* Adjust height to auto to accommodate content */
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .item {
+    margin: 20px;
+    padding: 5px;
+    
+  }
+
+  .item h2 {
+    font-size: 1em;
+  }
+
+  .item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .item p {
+    font-size: 12px;
+  }
+}
