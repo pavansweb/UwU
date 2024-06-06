@@ -78,5 +78,5 @@ function loadContent(section) {
   }
 
   // Load the default section
-  loadContent('about');
+  loadContent('projects');
 
