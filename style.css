@@ -1,10 +1,14 @@
-/* General Styling */
+html,
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  height: 100%; /* Allow the body to take full height */
-  overflow-y: auto; /* Allow vertical scrolling if content overflows */
+  overflow-x: hidden;
+  /* Prevent horizontal overflow */
+}
+
+h1 {
+  color: white;
 }
 
 #myVideo {
@@ -17,21 +21,79 @@ body {
   z-index: -1;
 }
 
+header {
+  width: 100vw;
+  /* Set header width to viewport width */
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px 0;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+  /* Set width of header content to 90% of viewport width */
+  margin: auto;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+#aboutmep {
+  font-size: 20px;
+  font-weight: 200px;
+}
+
 #contentBox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 600px;
+  width: 80vw;
+  /* Set content box width to 80% of viewport width */
+  max-width: 1200px;
+  /* Max width for large screens */
   background-color: rgba(0, 0, 0, 0.7);
   border: 5px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
-  overflow-y: scroll;
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Firefox */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  /* Firefox */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  padding: 10px 2px;
+  padding: 20px;
+  /* Add padding for text */
+  margin: 80px auto 0;
+  /* Center content box and add top margin */
+  color: white;
+  /* Ensure text color is white */
 }
 
 #contentBox::-webkit-scrollbar {
@@ -55,8 +117,10 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  text-decoration: none; /* Ensure link styling is removed */
-  color: white; /* Ensure text color is white */
+  text-decoration: none;
+  /* Ensure link styling is removed */
+  color: white;
+  /* Ensure text color is white */
 }
 
 .item:hover {
@@ -83,11 +147,19 @@ body {
   font-size: 14px;
 }
 
+#skillsp{
+  font-size: 20px;
+  font-weight: 200px;
+  
+}
+
 /* PC-Specific Styling */
 @media (min-width: 768px) {
   #contentBox {
-    width: 400px;
-    height: 700px;
+    width: 70vw;
+    /* Adjust width for larger screens */
+    height: 70vh;
+    /* Adjust height for larger screens */
   }
 
   .item h2 {
@@ -104,23 +176,73 @@ body {
   }
 }
 
+
+h2 {
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+form {
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #4caf50;
+}
+
+textarea {
+  height: 150px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+
 /* Mobile-Specific Styling */
 @media (max-width: 767px) {
-  body {
-    overflow-y: auto; /* Ensure body is scrollable on mobile */
+  header h1 {
+    font-size: 20px;
   }
 
   #contentBox {
-    width: 90%;
-    height: auto; /* Adjust height to auto to accommodate content */
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: 80%;
+    height: auto;
+    /* Adjust height to auto to accommodate content */
+    margin: 60px auto 0;
+    /* Center content box and adjust top margin */
+    padding: 10px;
+    /* Adjust padding for smaller screens */
   }
 
   .item {
     margin: 20px;
     padding: 5px;
-
   }
 
   .item h2 {

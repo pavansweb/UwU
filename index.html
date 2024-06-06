@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pavan Weblist</title>
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -15,188 +16,29 @@
 
   <header>
     <div id="header">
-      <h1>Pavan Weblist</h1>
+      <h1>Pavan</h1>
       <nav>
         <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" onclick="loadContent('about')">About Me</a></li>
+          <li><a href="#projects" onclick="loadContent('projects')">Projects</a></li>
+          <li><a href="#skills" onclick="loadContent('skills')">Skills</a></li>
+          <li><a href="#contact" onclick="loadContent('contact')">Contact</a></li>
         </ul>
       </nav>
+
     </div>
   </header>
 
+
+
   <div id="contentBox">
-    <a href="https://pavansweb.github.io/HorizonTunes/" class="item">
-      <h2>Horizon Tunes</h2>
-      <img src="https://i.imgur.com/V1gIGAi.jpg" alt="Horizon Tunes">
-      <p>Listen to music anytime anywhere now on Horizon Tunes!</p>
-    </a>
-
-    <a href="https://pavansweb.github.io/flowers" class="item">
-      <h2>Flowers</h2>
-      <img src="https://i.postimg.cc/YCKt5mg8/flowers.jpg" alt="Flowers">
-      <p>If you are sad all you need are flowers, just grab them by clicking here!</p>
-    </a>
-
-    <a href="https://pavansweb.github.io/Calculator/" class="item">
-      <h2>Calculator</h2>
-      <img src="https://i.postimg.cc/hvxsJwGk/Capture.jpg" alt="Calculator">
-      <p>Basic arithmetic calculator (if you failed 6th grade maths)</p>
-    </a>
-
-    <a href="https://pavansweb.github.io/billCalculator/" class="item">
-      <h2>Bill Splitter</h2>
-      <img src="https://i.postimg.cc/kGs5JMmD/bill-Calculator.jpg" alt="Bill Splitter">
-      <p>Out on a party? Split bills among friends. Just enter the amount and you can know how much each person has to pay.</p>
-    </a>
-
-    <a href="https://pavansweb.github.io/rickRoll/" class="item">
-      <h2>TOP SECRET</h2>
-      <img src="https://thumbs.dreamstime.com/b/top-secret-stamp-red-top-secret-classified-stamp-icon-illustration-top-secret-stamp-red-top-secret-classified-stamp-icon-161667856.jpg" alt="Top Secret">
-      <p></p>
-    </a>
-
-    <!-- Add more items as needed -->
+    <div id="content">
+    </div>
   </div>
+
+
 
   <script src="script.js"></script>
 </body>
 
 </html>
-
-<style>
-/* General Styling */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  height: 100%; /* Allow the body to take full height */
-  overflow-y: auto; /* Allow vertical scrolling if content overflows */
-}
-
-#myVideo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
-}
-
-header {
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  padding: 10px 0;
-  color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-}
-
-#header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 90%;
-  margin: auto;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 24px;
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav li {
-  margin: 0 10px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-#contentBox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 600px;
-  height: 600px;
-  background-color: rgba(0, 0, 0, 0.7);
-  border: 5px solid rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  overflow-y: scroll;
-  scrollbar-width: thin; /* Firefox */
-  scrollbar-color: rgba(255, 255, 255, 0.3) transparent; /* Firefox */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  padding: 10px 2px;
-  margin-top: 50px; /* Add margin to push contentBox below header */
-}
-
-#contentBox::-webkit-scrollbar {
-  width: 10px;
-}
-
-#contentBox::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-#contentBox::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-}
-
-.item {
-  display: block;
-  margin: 30px 20px;
-  padding: 10px;
-  text-align: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  text-decoration: none; /* Ensure link styling is removed */
-  color: white; /* Ensure text color is white */
-}
-
-.item:hover {
-  transform: scale(1.05);
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.item h2 {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 1.2em;
-}
-
-.item img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.item p {
-  margin: 0;
-  font-size: 14px;
-}
-
-/* PC-Specific Styling */
-@media 
