@@ -20,6 +20,11 @@ function loadContent(section) {
             <img src="https://i.imgur.com/V1gIGAi.jpg" alt="Horizon Tunes">
             <p>Listen to music anytime anywhere now on Horizon Tunes!</p>
           </a>
+          <a href=" https://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.pnghttps://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.png" class="item">
+            <h2>Weather Info</h2>
+            <img src="https://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.pnghttps://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.png" alt="Tic Tac Toe">
+            <p>Check your cits weather info now! </p>
+          </a>
           <a href="https://pavansweb.github.io/flowers" class="item">
             <h2>Flowers</h2>
             <img src="https://i.postimg.cc/YCKt5mg8/flowers.jpg" alt="Flowers">
@@ -35,11 +40,18 @@ function loadContent(section) {
             <img src="https://i.postimg.cc/kGs5JMmD/bill-Calculator.jpg" alt="Bill Splitter">
             <p>Out on a party? Split bills among friends. Just enter the amount and you can know how much each person has to pay.</p>
           </a>
+          <a href="https://pavansweb.github.io/TicTacToe" class="item">
+            <h2>Tic Tac Toe game</h2>
+            <img src="https://i.postimg.cc/CxZK0nQv/Capture.jpg" alt="Tic Tac Toe">
+            <p>Bored? play tic tac toe a 2 player game </p>
+          </a>
           <a href="https://pavansweb.github.io/rickRoll/" class="item">
             <h2>TOP SECRET</h2>
             <img src="https://thumbs.dreamstime.com/b/top-secret-stamp-red-top-secret-classified-stamp-icon-illustration-top-secret-stamp-red-top-secret-classified-stamp-icon-161667856.jpg" alt="Top Secret">
-            <p></p>
+            <p>PLEASE DONT CLICK THIS PLEASEE </p>
           </a>
+         
+          
         `;
         break;
 

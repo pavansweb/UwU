@@ -111,7 +111,7 @@ nav a:hover {
 
 .item {
   display: block;
-  margin: 20px;
+  margin: 40px;
   padding: 10px;
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
@@ -233,15 +233,15 @@ input[type="submit"]:hover {
   #contentBox {
     width: 80%;
     height: auto;
-    /* Adjust height to auto to accommodate content */
-    margin: 60px auto 0;
+   
+    margin: 80px auto 0;
     /* Center content box and adjust top margin */
     padding: 10px;
     /* Adjust padding for smaller screens */
   }
 
   .item {
-    margin: 20px;
+    margin: 30px;
     padding: 5px;
   }
 
