@@ -20,9 +20,9 @@ function loadContent(section) {
             <img src="https://i.imgur.com/V1gIGAi.jpg" alt="Horizon Tunes">
             <p>Listen to music anytime anywhere now on Horizon Tunes!</p>
           </a>
-          <a href=" https://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.pnghttps://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.png" class="item">
+          <a href="pavansweb.github.io/weather" class="item">
             <h2>Weather Info</h2>
-            <img src="https://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.pnghttps://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.png" alt="Tic Tac Toe">
+            <img src="https://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.pnghttps://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.png" alt="weather!?">
             <p>Check your cits weather info now! </p>
           </a>
           <a href="https://pavansweb.github.io/flowers" class="item">
