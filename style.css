@@ -1,29 +1,31 @@
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  Font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
+  font-weight: 500;
   overflow-x: hidden;
-  /* Prevent horizontal overflow */
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background-image: url("https://i.pinimg.com/564x/85/d7/37/85d737ebc14d917364377a43a4b30f0d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 h1 {
   color: white;
+  font-family: monospace;
 }
-
-#myVideo {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  z-index: -1;
+a{
+  color: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 header {
   width: 100vw;
-  /* Set header width to viewport width */
   background: rgba(0, 0, 0, 0.7);
   padding: 10px 0;
   color: white;
@@ -39,7 +41,6 @@ header {
   align-items: center;
   flex-direction: column;
   width: 90%;
-  /* Set width of header content to 90% of viewport width */
   margin: auto;
 }
 
@@ -69,44 +70,62 @@ nav a:hover {
   text-decoration: underline;
 }
 
-#aboutmep {
-  font-size: 20px;
-  font-weight: 200px;
+nav button {
+  height: 1.2rem;
+  width: 1.2rem;
+  background-image: url(/icons/refresh-button.png);
+  background-size: cover;
+  background-color: transparent;
+  border: none;
 }
 
-#contentBox {
+#aboutmep {
+  font-size: 20px;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.contentBox {
+  position: relative; /* Ensure that the spans are positioned relative to the contentBox */
   width: 80vw;
-  /* Set content box width to 80% of viewport width */
   max-width: 1200px;
-  /* Max width for large screens */
   background-color: rgba(0, 0, 0, 0.7);
-  border: 5px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   overflow-y: auto;
   scrollbar-width: thin;
-  /* Firefox */
   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
-  /* Firefox */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   padding: 20px;
-  /* Add padding for text */
   margin: 80px auto 0;
-  /* Center content box and add top margin */
   color: white;
-  /* Ensure text color is white */
+  transition: box-shadow 0.3s ease, border 0.3s ease, transform 2s ease; /* Add transform to transition */
+  border: 5px solid transparent;
+  border-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6));
+  border-image-slice: 1;
 }
 
-#contentBox::-webkit-scrollbar {
+.contentBox::-webkit-scrollbar {
   width: 10px;
 }
 
-#contentBox::-webkit-scrollbar-track {
+.contentBox::-webkit-scrollbar-track {
   background: transparent;
 }
 
-#contentBox::-webkit-scrollbar-thumb {
+.contentBox::-webkit-scrollbar-thumb {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
+}
+
+.contentBox.active {
+  border: 5px solid aqua;
+  border-image: none;
+  transform: translateY(20px)  scale(1.05) ;
+  transition-duration: 2s;
 }
 
 .item {
@@ -118,9 +137,7 @@ nav a:hover {
   border-radius: 10px;
   transition: transform 0.3s ease, background-color 0.3s ease;
   text-decoration: none;
-  /* Ensure link styling is removed */
   color: white;
-  /* Ensure text color is white */
 }
 
 .item:hover {
@@ -147,19 +164,25 @@ nav a:hover {
   font-size: 14px;
 }
 
-#skillsp{
+#skillsp {
   font-size: 20px;
-  font-weight: 200px;
-  
 }
 
 /* PC-Specific Styling */
 @media (min-width: 768px) {
-  #contentBox {
-    width: 70vw;
-    /* Adjust width for larger screens */
+  body {
+    background-image: url('https://wallpapercg.com/media/ts_2x/1003.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contentBox {
+    width: 27vw;
     height: 70vh;
-    /* Adjust height for larger screens */
+  }
+
+  .item {
+    margin: 13px 0px;
   }
 
   .item h2 {
@@ -167,15 +190,59 @@ nav a:hover {
   }
 
   .item img {
-    width: 150px;
-    height: 150px;
+    width: 4rem;
+    height: 4rem;
   }
 
   .item p {
     font-size: 16px;
   }
+
+  nav ul {
+    display: flex;
+  }
+
+  .contentBox.hidden {
+    display: none;
+  }
 }
 
+/* Mobile-Specific Styling */
+@media (max-width: 767px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  .contentBox:nth-child(2),
+  .contentBox:nth-child(3) {
+    display: none;
+  }
+
+  .contentBox {
+    width: 80%;
+    height: 73vh;
+    margin: 80px auto 0;
+    padding: 10px;
+  }
+
+  .item {
+    margin: 30px;
+    padding: 5px;
+  }
+
+  .item h2 {
+    font-size: 1em;
+  }
+
+  .item img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .item p {
+    font-size: 12px;
+  }
+}
 
 h2 {
   text-align: center;
@@ -221,40 +288,4 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
   background-color: #45a049;
-}
-
-
-/* Mobile-Specific Styling */
-@media (max-width: 767px) {
-  header h1 {
-    font-size: 20px;
-  }
-
-  #contentBox {
-    width: 80%;
-    height: auto;
-   
-    margin: 80px auto 0;
-    /* Center content box and adjust top margin */
-    padding: 10px;
-    /* Adjust padding for smaller screens */
-  }
-
-  .item {
-    margin: 30px;
-    padding: 5px;
-  }
-
-  .item h2 {
-    font-size: 1em;
-  }
-
-  .item img {
-    width: 80px;
-    height: 80px;
-  }
-
-  .item p {
-    font-size: 12px;
-  }
 }
