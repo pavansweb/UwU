@@ -147,9 +147,10 @@ nav button {
 }
 
 .item h2 {
+  font-family: auto;
+  font-weight: 100;
   margin: 0;
   margin-bottom: 10px;
-  font-size: 1.2em;
 }
 
 .item img {
@@ -191,7 +192,7 @@ nav button {
   }
 
   .item h2 {
-    font-size: 1.5em;
+    font-size: 1.7em;
   }
 
   .item img {
@@ -232,7 +233,7 @@ nav button {
   }
 
   .item h2 {
-    font-size: 1em;
+    font-size: 1.8em;
   }
 
   .item img {
