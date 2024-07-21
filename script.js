@@ -13,15 +13,20 @@ function loadContent(section) {
     about: {
       title: 'About Me',
       content: `
-        <p id='aboutmep'>Just an average 10th grader <br>
-        I am a web developer and I love to create fun projects <br>
-        If you need any information or help feel free to <a href="#contact" onclick="loadContent('contact')">Contact</a> me <br><br>
+        <p id='aboutmep'>Just an <mark>average 10th grader</mark> <br>
+        <br>
+        I am a <mark>web developer</mark> and I make websites
+        <br><br>
+        <mark>JEE aspirant for 2026</mark>
+        If you need any information or help feel free to <a href="#contact" onclick="loadContent('contact')">Contact me </a> <br>
+        <br>
         Please do check out my <a href="#projects" onclick="loadContent('projects')">Projects</a></p>
       `,
     },
     projects: {
       title: 'Projects',
       content: `
+      <div></div>
         <a href="https://pavansweb.github.io/HorizonTunes/" class="item">
           <h2>Horizon Tunes</h2>
           <img src="https://i.imgur.com/V1gIGAi.jpg" alt="Horizon Tunes">
@@ -57,11 +62,12 @@ function loadContent(section) {
           <img src="https://thumbs.dreamstime.com/b/top-secret-stamp-red-top-secret-classified-stamp-icon-illustration-top-secret-stamp-red-top-secret-classified-stamp-icon-161667856.jpg" alt="Top Secret">
           <p>PLEASE DON'T CLICK THIS PLEASEE</p>
         </a>
-        <p>Wanna know more about me? <a href="#about" onclick="loadContent('about')">Click here</a></p>
+        <div></div>
+        <p>Need any <mark>information?</mark> <a href="#contact" onclick="loadContent('contact')"> Just drop a message here </a></p>
       `
     },
     contact: {
-      title: 'Contact Us',
+      title: 'Contact Me',
       content: `
         <form id="contactForm" action="https://formsubmit.co/pavansh555@gmail.com" method="post">
           <label for="name"><i class="fas fa-user"></i>Your Name</label>
@@ -79,7 +85,7 @@ function loadContent(section) {
   };
 
   if (section) {
-    if (window.innerWidth < 768) {
+    if (window.innerWidth < 1000) {
       // For mobile view
       const firstBox = contentBoxes.about;
       if (section && sections[section]) {
@@ -112,7 +118,7 @@ function loadContent(section) {
 }
 
 function checkScreenSize() {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 1000) {
     console.log("mobile");
     loadContent('about'); // Load only about section for mobile view by default
   } else {

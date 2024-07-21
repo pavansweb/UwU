@@ -17,14 +17,15 @@ body {
 
 h1 {
   color: white;
-  font-family: monospace;
+ 
 }
 a{
-  color: white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: inherit;
+
 }
 
 header {
+  Font-family: Didot, Didot LT STD, Hoefler Text, Garamond, Calisto MT, Times New Roman, serif;
   width: 100vw;
   background: rgba(0, 0, 0, 0.7);
   padding: 10px 0;
@@ -90,6 +91,7 @@ nav button {
 }
 
 .contentBox {
+
   position: relative; /* Ensure that the spans are positioned relative to the contentBox */
   width: 80vw;
   max-width: 1200px;
@@ -169,16 +171,25 @@ nav button {
 }
 
 /* PC-Specific Styling */
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   body {
-    background-image: url('https://wallpapercg.com/media/ts_2x/1003.webp');
+    background-image: url('/icons/dekstop-background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  .contentBox {
-    width: 27vw;
+  #firstBox,#thirdBox {
+    width: 22vw;
     height: 70vh;
+  }
+  
+  #secondBox{
+    width: 33vw;
+    height: 70vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: auto; 
+    gap: 10px; 
   }
 
   .item {
@@ -208,7 +219,7 @@ nav button {
 }
 
 /* Mobile-Specific Styling */
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   header h1 {
     font-size: 20px;
   }
