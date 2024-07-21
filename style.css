@@ -9,7 +9,8 @@ html, body {
 }
 
 body {
-  background-image: url("https://i.pinimg.com/564x/85/d7/37/85d737ebc14d917364377a43a4b30f0d.jpg");
+  background-color: black;
+  background-image: url("/icons/dekstop-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -47,7 +48,6 @@ header {
 
 header h1 {
   margin: 0;
-  font-size: 24px;
 }
 
 nav ul {
@@ -64,7 +64,7 @@ nav li {
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 2rem;
 }
 
 nav a:hover {
@@ -91,7 +91,6 @@ nav button {
 }
 
 .contentBox {
-
   position: relative; /* Ensure that the spans are positioned relative to the contentBox */
   width: 80vw;
   max-width: 1200px;
@@ -102,7 +101,7 @@ nav button {
   scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   padding: 20px;
-  margin: 80px auto 0;
+  margin: 8rem auto 0;
   color: white;
   transition: box-shadow 0.3s ease, border 0.3s ease, transform 2s ease; /* Add transform to transition */
   border: 5px solid transparent;
@@ -126,8 +125,8 @@ nav button {
 .contentBox.active {
   border: 5px solid aqua;
   border-image: none;
-  transform: translateY(20px)  scale(1.05) ;
-  transition-duration: 2s;
+  transform: translateY(10px)  scale(1.02) ;
+  transition-duration: 1s;
 }
 
 .item {
@@ -172,11 +171,6 @@ nav button {
 
 /* PC-Specific Styling */
 @media (min-width: 1000px) {
-  body {
-    background-image: url('https://github.com/pavansweb/UwU/blob/main/icons/dekstop-background.jpg?raw=true');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
   #firstBox,#thirdBox {
     width: 22vw;
@@ -220,10 +214,7 @@ nav button {
 
 /* Mobile-Specific Styling */
 @media (max-width: 1000px) {
-  header h1 {
-    font-size: 20px;
-  }
-
+ 
   .contentBox:nth-child(2),
   .contentBox:nth-child(3) {
     display: none;
@@ -232,7 +223,6 @@ nav button {
   .contentBox {
     width: 80%;
     height: 73vh;
-    margin: 80px auto 0;
     padding: 10px;
   }
 

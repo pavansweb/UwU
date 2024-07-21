@@ -13,11 +13,11 @@ function loadContent(section) {
     about: {
       title: 'About Me',
       content: `
-        <p id='aboutmep'>Just an <mark>average 10th grader</mark> <br>
+        <p id='aboutmep'>Just an average 10th grader  <br>
         <br>
-        I am a <mark>web developer</mark> and I make websites
+        I am a web developer  and I make websites
         <br><br>
-        <mark>JEE aspirant for 2026</mark>
+       JEE aspirant for 2026 
         If you need any information or help feel free to <a href="#contact" onclick="loadContent('contact')">Contact me </a> <br>
         <br>
         Please do check out my <a href="#projects" onclick="loadContent('projects')">Projects</a></p>
@@ -32,17 +32,25 @@ function loadContent(section) {
           <img src="https://i.imgur.com/V1gIGAi.jpg" alt="Horizon Tunes">
           <p>Listen to music anytime anywhere now on Horizon Tunes!</p>
         </a>
+        
         <a href="https://pavansweb.github.io/weather" class="item">
           <h2>Weather Info</h2>
           <img src="https://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.png" alt="weather!?">
           <p>Check your city's weather info now!</p>
         </a>
+        
         <a href="https://pavansweb.github.io/flowers" class="item">
           <h2>Flowers</h2>
           <img src="https://i.postimg.cc/YCKt5mg8/flowers.jpg" alt="Flowers">
           <p>If you are sad all you need are flowers, just grab them by clicking here!</p>
         </a>
-        <a href="https://pavansweb.github.io/Calculator/" class="item">
+        
+        <a href="https://pavansweb.github.io/rock/" class="item">
+          <h2>Rock Paper Scissors </h2>
+          <img src="https://i.postimg.cc/9Mx0TcLr/rockpaperscissor.jpg" alt="Rock Paper Scissors ">
+          <p>Listen to music anytime anywhere now on Horizon Tunes!</p>
+        </a>
+        <a href="https://pavansweb.github.io/calculator/" class="item">
           <h2>Calculator</h2>
           <img src="https://i.postimg.cc/hvxsJwGk/Capture.jpg" alt="Calculator">
           <p>Basic arithmetic calculator (if you failed 6th grade maths)</p>
@@ -63,7 +71,7 @@ function loadContent(section) {
           <p>PLEASE DON'T CLICK THIS PLEASEE</p>
         </a>
         <div></div>
-        <p>Need any <mark>information?</mark> <a href="#contact" onclick="loadContent('contact')"> Just drop a message here </a></p>
+        <p>Need any information?  <a href="#contact" onclick="loadContent('contact')"> Just drop a message here </a></p>
       `
     },
     contact: {
@@ -100,9 +108,15 @@ function loadContent(section) {
       Object.keys(contentBoxes).forEach(key => {
         if (key === section) {
           contentBoxes[key].innerHTML = `<h1>${sections[key].title} :</h1>${sections[key].content}`;
+
           contentBoxes[key].classList.add('active');
+          document.body.style.backgroundImage = "url('https://rukminim2.flixcart.com/image/850/1000/kz4gh3k0/poster/x/o/l/medium-naruto-boruto-anime-mangeky-c58-d-sharingan-red-sharingan-original-imagb786getm3cvg.jpeg')";
+          //wait for 2 seconds 
+          setTimeout(function() {
+            document.body.style.backgroundImage = "url('/icons/dekstop-background.jpg')"; // Set the new background image after 2 seconds
+          }, 1000);
         } else {
-          contentBoxes[key].innerHTML = '';
+          contentBoxes[key].innerHTML = ':)';
           contentBoxes[key].classList.remove('active');
         }
       });
@@ -120,7 +134,7 @@ function loadContent(section) {
 function checkScreenSize() {
   if (window.innerWidth < 1000) {
     console.log("mobile");
-    loadContent('about'); // Load only about section for mobile view by default
+    loadContent('projects'); // Load only about section for mobile view by default
   } else {
     loadContent(); // Load all sections for desktop view
     console.log("pc");
