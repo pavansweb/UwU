@@ -173,7 +173,7 @@ nav button {
 /* PC-Specific Styling */
 @media (min-width: 1000px) {
   body {
-    background-image: url('/icons/dekstop-background.jpg');
+    background-image: url('https://github.com/pavansweb/UwU/blob/main/icons/dekstop-background.jpg?raw=true');
     background-repeat: no-repeat;
     background-size: cover;
   }
