@@ -3,7 +3,7 @@ html, body {
   padding: 0;
   Font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
   font-weight: 500;
-  overflow-x: hidden;
+  overflow-x: visible;
   width: 100vw;
   height: 100vh;
 }
@@ -48,6 +48,7 @@ header {
 
 header h1 {
   margin: 0;
+  font-size: 1rem;
 }
 
 nav ul {
@@ -64,7 +65,7 @@ nav li {
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.2rem;
 }
 
 nav a:hover {
@@ -215,6 +216,10 @@ nav button {
 
 /* Mobile-Specific Styling */
 @media (max-width: 1000px) {
+
+  nav a {
+    font-size: 1rem;
+  }
  
   .contentBox:nth-child(2),
   .contentBox:nth-child(3) {

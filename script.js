@@ -29,25 +29,25 @@ function loadContent(section) {
       <div></div>
         <a href="https://pavansweb.github.io/HorizonTunes/" class="item">
           <h2>Horizon Tunes</h2>
-          <img src="https://i.imgur.com/V1gIGAi.jpg" alt="Horizon Tunes">
+          <img src="/icons/horizonTunes.webp" alt="Horizon Tunes">
           <p>Listen to music anytime anywhere now on Horizon Tunes!</p>
         </a>
         
         <a href="https://pavansweb.github.io/weather" class="item">
           <h2>Weather Info</h2>
-          <img src="https://i.postimg.cc/DyxfF97d/94765cc674ee3688fb3fa6478dc435aa-2.png" alt="weather!?">
+          <img src="/icons/weather.webp" alt="weather!?">
           <p>Check your city's weather info now!</p>
         </a>
         
         <a href="https://pavansweb.github.io/flowers" class="item">
           <h2>Flowers</h2>
-          <img src="https://i.postimg.cc/YCKt5mg8/flowers.jpg" alt="Flowers">
+          <img src="/icons/flowers.webp" alt="Flowers">
           <p>If you are sad all you need are flowers, just grab them by clicking here!</p>
         </a>
         
         <a href="https://pavansweb.github.io/rock/" class="item">
           <h2>Rock Paper Scissors </h2>
-          <img src="https://i.postimg.cc/9Mx0TcLr/rockpaperscissor.jpg" alt="Rock Paper Scissors ">
+          <img src="/icons/rockpaperscissor.webp" alt="Rock Paper Scissors ">
           <p>Bored? Play rock paper Scissor and test your luck with computer</p>
         </a>
         
@@ -59,19 +59,19 @@ function loadContent(section) {
 
         <a href="https://pavansweb.github.io/TicTacToe" class="item">
           <h2>Tic Tac Toe game</h2>
-          <img src="https://i.postimg.cc/CxZK0nQv/Capture.jpg" alt="Tic Tac Toe">
+          <img src="/icons/ticTacToe.webp" alt="Tic Tac Toe">
           <p>Bored? play tic tac toe a 2 player game</p>
         </a>
         
         <a href="https://pavansweb.github.io/billCalculator/" class="item">
           <h2>Bill Splitter</h2>
-          <img src="https://i.postimg.cc/kGs5JMmD/bill-Calculator.jpg" alt="Bill Splitter">
+          <img src="/icons/billSpliter.webp" alt="Bill Splitter">
           <p>Out on a party? Split bills among friends. Just enter the amount and you can know how much each person has to pay.</p>
         </a>
         
         <a href="https://pavansweb.github.io/rickRoll/" class="item">
           <h2>TOP SECRET</h2>
-          <img src="https://thumbs.dreamstime.com/b/top-secret-stamp-red-top-secret-classified-stamp-icon-illustration-top-secret-stamp-red-top-secret-classified-stamp-icon-161667856.jpg" alt="Top Secret">
+          <img src="/icons/topSecret.webp" alt="Top Secret">
           <p>PLEASE DON'T CLICK THIS PLEASEE</p>
         </a>
         <div></div>
