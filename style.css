@@ -208,3 +208,26 @@ footer {
     background-color: #3498DB;
     color: #FFFFFF;
 }
+
+@media screen and (max-width: 768px){
+    #profile-container{
+        flex-direction: column;
+        padding-top: 5rem;
+    }
+
+    #projects-container{
+        padding: 0;
+    }
+    .projects-grid {
+    grid-template-columns: auto auto;
+    }
+    .project-box img {
+        height: 125px;
+    }
+    .project-info {
+        padding: 0.3rem;
+    }
+    .project-info h2 {
+        font-size: 1rem;
+    }
+}
